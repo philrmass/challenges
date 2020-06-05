@@ -2,15 +2,18 @@
   background: var(--bg-white);
   padding: var(--margin-4);
   color: var(--text-black);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-normal);
 }
 
 .header {
   padding: var(--margin-3);
-  padding-bottom: var(--margin-4);
   background: var(--bg-blue);
+  margin-bottom: var(--margin-4);
+}
+
+.title {
   color: var(--text-white);
-  font-size: var(--size-2);
+  font-size: var(--size-3);
 }
 
 .main {

@@ -1,17 +1,18 @@
 import React from 'react';
 import Challenge from './Challenge';
 import styles from '../styles/App.module.css';
+import * as square from '../challenges/square';
 
 function App() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        Drawing Challenges
+        <div className={styles.title}>
+          Drawing Challenges
+        </div>
       </div>
       <div className={styles.main}>
-        <Challenge 
-          file={'../challenges/square.js'}
-        />
+        <Challenge { ...square } />
       </div>
     </div>
   );

@@ -1,2 +1,19 @@
 .main {
+  background: var(--bg-blue);
+  color: var(--text-white);
+}
+
+.click {
+  width: 100%;
+  padding: var(--margin-3);
+  font-size: var(--size-2);
+  text-align: left;
+}
+
+.code {
+  width: 100%;
+  padding: var(--margin-3);
+  font-family: var(--font-monospace);
+  text-align: left;
+  white-space: pre-wrap;
 }

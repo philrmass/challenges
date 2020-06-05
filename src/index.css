@@ -1,14 +1,19 @@
 :root {
   --bg-white: #ffffff;
+  --bg-gray0: #fafafa;
   --bg-blue: #323558;
   --text-black: #282828;
   --text-white: #f0f0f0;
+  --border: 1px solid #c0c0c0;
   --margin-1: 0.25rem;
   --margin-2: 0.5rem;
   --margin-3: 1rem;
   --margin-4: 1.5rem;
   --size-1: 1rem;
-  --size-2: 2rem;
+  --size-2: 1.2rem;
+  --size-3: 2rem;
+  --font-normal: Arial, sans-serif;
+  --font-monospace: "Courier New", Courier, monospace;
 }
 
 * {
