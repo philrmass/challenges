@@ -3,9 +3,17 @@ export const description = 'Draw a square centered in the drawing area. It shoul
 
 export function draw(cmds) {
   cmds.setColor(0, 0, 1);
-  cmds.moveTo(50, 100);
-  cmds.lineTo(350, 200);
-  cmds.lineTo(350, 300);
+
+  let x = 50;
+  let y = 100;
+  cmds.moveTo(x, y);
+
+  x = x + 300;
+  y = y + 100;
+  cmds.lineTo(x, y);
+
+  y = y + 100;
+  cmds.lineTo(x, y);
 }
 
 export const done = false;
