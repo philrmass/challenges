@@ -14,13 +14,19 @@ function createCommands(size, ctx) {
 
   function moveTo(x, y) {
     const yi = size - y;
+
+    ctx.beginPath();
     ctx.moveTo(x, yi);
   }
 
   function lineTo(x, y) {
     const yi = size - y;
+
     ctx.lineTo(x, yi);
     ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(x, yi);
   }
 
   return {
