@@ -36,7 +36,6 @@
     "linebreak-style": [ "error", "unix" ],
     "max-len": [ "warn", { "code": 120 } ],
     "multiline-ternary": [ "warn", "never" ],
-    "no-console": "warn",
     "no-case-declarations": "warn",
     "no-else-return": "warn",
     "no-eval": "error",

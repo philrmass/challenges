@@ -2,6 +2,7 @@ import React from 'react';
 import Challenge from './Challenge';
 import styles from '../styles/App.module.css';
 import * as square from '../challenges/square';
+import * as hexagon from '../challenges/hexagon';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </div>
       <div className={styles.main}>
         <Challenge { ...square } />
+        <Challenge { ...hexagon } />
       </div>
     </div>
   );
