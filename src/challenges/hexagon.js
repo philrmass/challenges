@@ -21,4 +21,4 @@ export function draw(cmds) {
   cmds.lineTo(150, 200);
 }
 
-export const done = false;
+export const done = true;
