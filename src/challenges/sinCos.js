@@ -22,6 +22,16 @@ function drawSquare(x, y, len, cmds) {
   ({ x, y } = angleLine(x, y, 270, len, cmds));
 }
 
+function drawHexagon(x, y, len, cmds) {
+  cmds.moveTo(x, y);
+  ({ x, y } = angleLine(x, y, 0, len, cmds));
+  ({ x, y } = angleLine(x, y, 60, len, cmds));
+  ({ x, y } = angleLine(x, y, 120, len, cmds));
+  ({ x, y } = angleLine(x, y, 180, len, cmds));
+  ({ x, y } = angleLine(x, y, 240, len, cmds));
+  ({ x, y } = angleLine(x, y, 300, len, cmds));
+}
+
 export function draw(cmds) {
   // purple square
   cmds.setColor(.5, 0, 1);
@@ -30,18 +40,8 @@ export function draw(cmds) {
   cmds.setColor(0, 1, 0);
   drawSquare(390, 390, 10, cmds);
 
-  // blue hexagon
-  cmds.setColor(0, .5, 1);
-  let x = 200;
-  let y = 10;
-  let len = 50;
-  cmds.moveTo(x, y);
-  ({ x, y } = angleLine(x, y, 0, len, cmds));
-  ({ x, y } = angleLine(x, y, 60, len, cmds));
-  ({ x, y } = angleLine(x, y, 120, len, cmds));
-  ({ x, y } = angleLine(x, y, 180, len, cmds));
-  ({ x, y } = angleLine(x, y, 240, len, cmds));
-  ({ x, y } = angleLine(x, y, 300, len, cmds));
+  cmds.setColor(.2, .1, .123);
+  drawHexagon(100, 100, 20, cmds);
 
   // green 12-sided polygon
   cmds.setColor(.5, 1, 0);
