@@ -32,6 +32,27 @@ function drawHexagon(x, y, len, cmds) {
   ({ x, y } = angleLine(x, y, 300, len, cmds));
 }
 
+function drawDodecagon(x, y, len, cmds) {
+  cmds.moveTo(x, y);
+  ({ x, y } = angleLine(x, y, 0, len, cmds));
+  ({ x, y } = angleLine(x, y, 30, len, cmds));
+  ({ x, y } = angleLine(x, y, 60, len, cmds));
+  ({ x, y } = angleLine(x, y, 90, len, cmds));
+  ({ x, y } = angleLine(x, y, 120, len, cmds));
+  ({ x, y } = angleLine(x, y, 150, len, cmds));
+  ({ x, y } = angleLine(x, y, 180, len, cmds));
+  ({ x, y } = angleLine(x, y, 210, len, cmds));
+  ({ x, y } = angleLine(x, y, 240, len, cmds));
+  ({ x, y } = angleLine(x, y, 270, len, cmds));
+  ({ x, y } = angleLine(x, y, 300, len, cmds));
+  ({ x, y } = angleLine(x, y, 330, len, cmds));
+}
+
+function drawPolygon(x, y, len, sides, cmds) {
+  cmds.moveTo(x, y);
+  ({ x, y } = angleLine(x, y, 0, len, cmds));
+}
+
 export function draw(cmds) {
   // purple square
   cmds.setColor(.5, 0, 1);
@@ -44,14 +65,12 @@ export function draw(cmds) {
   drawHexagon(100, 100, 20, cmds);
 
   // green 12-sided polygon
-  cmds.setColor(.5, 1, 0);
-  cmds.moveTo(75, 200);
-  cmds.lineTo(125, 200);
+  cmds.setColor(.25, .5, 0);
+  drawDodecagon(250, 200, 20, cmds);
 
-  // orange circle
+  // orange pentagon
   cmds.setColor(1, .5, 0);
-  cmds.moveTo(225, 200);
-  cmds.lineTo(250, 200);
+  drawPolygon(50, 200, 50, 5, cmds);
 }
 
 export const done = false;
