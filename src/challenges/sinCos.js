@@ -49,8 +49,13 @@ function drawDodecagon(x, y, len, cmds) {
 }
 
 function drawPolygon(x, y, len, sides, cmds) {
+  const sideangle = 360 / sides;
+
   cmds.moveTo(x, y);
-  ({ x, y } = angleLine(x, y, 0, len, cmds));
+  for (let i = 0; i < sides; i++) {
+    const angle = i * sideangle;
+    ({ x, y } = angleLine(x, y, angle, len, cmds));
+  }
 }
 
 export function draw(cmds) {
@@ -71,6 +76,10 @@ export function draw(cmds) {
   // orange pentagon
   cmds.setColor(1, .5, 0);
   drawPolygon(50, 200, 50, 5, cmds);
+
+  // red octagon
+  cmds.setColor(1, 0, 0);
+  drawPolygon(250, 50, 40, 8, cmds);
 }
 
 export const done = false;
